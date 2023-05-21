@@ -24,3 +24,30 @@ console.log('here');
 invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());
 });
+
+interface IsPerson {
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a: number): number;
+}
+
+const me: IsPerson = {
+    name: 'John',
+    age: 23,
+    speak(text: string): void {
+        console.log(text);
+    },
+    spend(amount: number): number {
+        console.log('I spent', amount);
+        return amount;
+    },
+};
+
+console.log(me);
+
+const greeting = (person: IsPerson) => {
+    console.log(person.name);
+};
+
+greeting(me);

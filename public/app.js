@@ -17,3 +17,19 @@ console.log('here');
 invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());
 });
+const me = {
+    name: 'John',
+    age: 23,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
+    },
+};
+console.log(me);
+const greeting = (person) => {
+    console.log(person.name);
+};
+greeting(me);
