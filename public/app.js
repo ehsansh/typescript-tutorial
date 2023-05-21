@@ -22,4 +22,7 @@ const inv1 = new Invoice('ehsan', 'work on website', 300);
 const inv2 = new Invoice('james', 'work on website', 200);
 let invoices = [];
 invoices.push(inv1);
-inv1.client = 'henry';
+invoices.push(inv2);
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});

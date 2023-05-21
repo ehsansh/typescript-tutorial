@@ -12,9 +12,9 @@ form.addEventListener('submit', (e: Event) => {
 });
 
 class Invoice {
-    client: string;
-    details: string;
-    amount: number;
+    readonly client: string;
+    private details: string;
+    public amount: number;
     constructor(c: string, d: string, a: number) {
         this.client = c;
         this.details = d;
@@ -31,5 +31,8 @@ const inv2 = new Invoice('james', 'work on website', 200);
 let invoices: Invoice[] = [];
 
 invoices.push(inv1);
+invoices.push(inv2);
 
-inv1.client = 'henry';
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
