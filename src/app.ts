@@ -1,4 +1,16 @@
 import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
+
+let docOne: HasFormatter;
+let docTwo: HasFormatter;
+
+docOne = new Invoice('ehsan', 'web work', 250);
+docTwo = new Invoice('james', 'teaching work', 200);
+
+let docs: HasFormatter[] = [];
+docs.push(docOne);
+docs.push(docTwo);
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
@@ -20,7 +32,7 @@ let invoices: Invoice[] = [];
 
 invoices.push(inv1);
 invoices.push(inv2);
-console.log('here');
+
 invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());
 });
