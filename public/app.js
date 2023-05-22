@@ -19,6 +19,14 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
+const one = {
+    id: 12,
+    data: 'test',
+};
+const two = {
+    id: 12,
+    data: { name: 'ehsan' },
+};
 // let docOne: HasFormatter;
 // let docTwo: HasFormatter;
 // docOne = new Invoice('ehsan', 'web work', 250);

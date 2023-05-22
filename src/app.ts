@@ -27,6 +27,20 @@ form.addEventListener('submit', (e: Event) => {
     list.render(doc, type.value, 'end');
 });
 
+interface Resource<T> {
+    id: number;
+    data: T;
+}
+
+const one: Resource<string> = {
+    id: 12,
+    data: 'test',
+};
+const two: Resource<object> = {
+    id: 12,
+    data: { name: 'ehsan' },
+};
+
 // let docOne: HasFormatter;
 // let docTwo: HasFormatter;
 
