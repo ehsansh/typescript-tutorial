@@ -19,12 +19,21 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+})(ResourceType || (ResourceType = {}));
 const one = {
     id: 12,
+    resourceType: ResourceType.BOOK,
     data: 'test',
 };
 const two = {
     id: 12,
+    resourceType: ResourceType.AUTHOR,
     data: { name: 'ehsan' },
 };
 // let docOne: HasFormatter;
